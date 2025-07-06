@@ -3,28 +3,16 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      java: corretto17  # or corretto11 if you use Java 11
+      java: corretto17
     commands:
       - echo Installing Maven...
       - mvn --version
 
-  pre_build:
-    commands:
-      - echo Cleaning previous builds...
-      - mvn clean
-
   build:
     commands:
-      - echo Building the project...
-      - mvn package -DskipTests
-
-  post_build:
-    commands:
-      - echo Build completed on `date`
-      - echo Copying JAR to output artifact...
-      - mkdir -p output
-      - cp target/*.jar output/
+      - echo Build started on `date`
+      - mvn clean package -DskipTests
 
 artifacts:
   files:
-    - output/**/*
+    - target/*.jar
