@@ -8,6 +8,7 @@ public class SelfVelocityApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SelfVelocityApplication.class, args);
+		System.out.println("start");
 	}
 
 }
