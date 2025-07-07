@@ -10,4 +10,8 @@ public class UserController {
 	public String demo() {
 		return "index";
 	}
+	@GetMapping("/cars")
+	public String demo1() {
+		return "cars";
+	}
 }

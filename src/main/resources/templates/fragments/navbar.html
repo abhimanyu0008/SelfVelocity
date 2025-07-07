@@ -1,0 +1,114 @@
+<th:block th:fragment="navbar">
+
+  <!-- Sticky wrapper with reduced height -->
+  <div class="sticky-top shadow-sm" style="--navbar-height: 60px;">
+
+    <!-- Top Contact Bar - made more compact -->
+    <div class="bg-warning text-dark py-1">
+      <div class="container d-flex flex-wrap justify-content-between align-items-center small">
+        <div class="d-flex gap-2 gap-sm-3">
+          <span><i class="fab fa-whatsapp me-1"></i> +91 9764442140</span>
+          <span class="d-none d-sm-inline"><i class="fas fa-phone me-1"></i> +91 9764442140</span>
+        </div>
+        <div>
+          <span class="d-none d-md-inline"><i class="fas fa-envelope me-1"></i> support@selfspin.com</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navbar - compact version -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white" style="min-height: var(--navbar-height);">
+      <div class="container">
+        <!-- Compact Logo -->
+        <a class="navbar-brand d-flex align-items-center py-0" href="#">
+          <img src="/img/logo.png" alt="SELF VELOCITY" 
+               class="img-fluid me-2" 
+               style="height: 36px; width: auto; max-height: 40px;"/>
+          <span class="d-none d-lg-block fs-5 fw-bold text-dark">SELF VELOCITY</span>
+        </a>
+
+        <!-- Compact Toggler -->
+        <button class="navbar-toggler border-0 py-1" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Navbar links - compact version -->
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto mb-0 mb-lg-0 align-items-center gap-lg-3 gap-1">
+            <!-- City Dropdown - compact -->
+            <li class="nav-item dropdown">
+              <a class="btn btn-outline-warning btn-sm dropdown-toggle px-2" href="#"
+                 role="button" data-bs-toggle="dropdown">
+                <i class="fas fa-map-marker-alt fs-6"></i> Pune
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item small" href="#">Pune</a></li>
+                <li><a class="dropdown-item small" href="#">Mumbai</a></li>
+                <li><a class="dropdown-item small" href="#">Delhi</a></li>
+              </ul>
+            </li>
+
+            <!-- Main Links - smaller text -->
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" th:href="@{/}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" href="#">FAQs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" href="#">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" href="#">Blog</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" href="#">List & Earn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-dark px-2 small" href="#">EV Invest</a>
+            </li>
+          </ul>
+
+          <!-- Compact CTA -->
+          <div class="d-flex justify-content-center justify-content-lg-end mt-2 mt-lg-0">
+            <a th:href="@{/login}" class="btn btn-warning text-dark fw-bold px-3 py-1 small">
+              <i class="fas fa-sign-in-alt me-1"></i> Login
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+  </div>
+
+  <!-- Compact hover effects -->
+  <style>
+    .nav-link {
+      font-size: 0.85rem !important;
+      padding-top: 0.25rem !important;
+      padding-bottom: 0.25rem !important;
+    }
+    
+    .navbar {
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+    
+    .dropdown-item {
+      padding: 0.25rem 1rem;
+    }
+    
+    @media (max-width: 992px) {
+      .navbar-collapse {
+        padding: 0.5rem 0;
+      }
+      
+      .nav-item {
+        padding: 0.25rem 0;
+      }
+    }
+  </style>
+
+</th:block>
